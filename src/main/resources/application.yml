@@ -1,0 +1,28 @@
+spring:
+#  profiles:
+#    active: dev
+  application:
+    name: xkl-springboot
+server:
+  port: 8000
+  servlet:
+    context-path:  /xkl
+xkl:
+  springboot:
+    version: 2.1,2.1.4
+    name: study
+management:
+  endpoint:
+    shutdown:
+      enabled: true #最特殊的监控端点
+  endpoints:
+    web:
+      exposure:
+        include: "*" #打开所有的监控点
+  # /xkl/actuator
+info:
+  app:
+    name: xkl-springboot
+    groupId: com.xkl.springboot
+    version: 1.0-SNAPSHOT
+
